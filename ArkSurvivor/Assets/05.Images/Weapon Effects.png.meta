@@ -1,0 +1,1178 @@
+fileFormatVersion: 2
+guid: 8ce76cb588df41949b4cfe3b4eaff6bb
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lightning 0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 468
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ec9241b19fbaa4f89c72705e384087
+      internalID: 155617428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning 1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 455
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f86bb242daa794685509ca008d3f06
+      internalID: -811975230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning 3
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 402
+        width: 64
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9590a622fdacd4ca0b58f1db48c970
+      internalID: -352576794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning 4
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 401
+        width: 57
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dbac1d60c1762f4584fc1603be21629
+      internalID: 151970210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning 5
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 400
+        width: 73
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a760d5eecd41acb409132764e394f9b5
+      internalID: 1933756912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning 6
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 400
+        width: 67
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e833f160fc1b59c47bba1c1c2fa8345b
+      internalID: -1961629800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning 7
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 399
+        width: 66
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44df17f9d92dab04cb43c726da3144a2
+      internalID: 1326875128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning 2
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 410
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e43e075e619049f4f8933aee6a3b4455
+      internalID: 584966405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike 3
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 366
+        width: 43
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 722c45b35120f0448bcd658d165353eb
+      internalID: 48047159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike 1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 366
+        width: 47
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 710f79d300186054fa36c85bd70d238d
+      internalID: -1708357891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike 2
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 366
+        width: 56
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de3d69895b67464e90dc1bbec540a3c
+      internalID: 2026201028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike 4
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 366
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a71701d6bb91e44a9d70d5d811bbb5
+      internalID: 1235490543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shield 0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 317
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b337866d23086740bcda4f3bd90186e
+      internalID: -2082447722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike 5
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 366
+        width: 29
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27aca826c3f55ff49a7f43a74f1732c3
+      internalID: 339426207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike 6
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 366
+        width: 26
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca4f9c17a4543749bfef096f3006c97
+      internalID: 1004861425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike 7
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 366
+        width: 13
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3399b6e2beb1a0c4bb129641e7044d34
+      internalID: 313671925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shield 1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 317
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87b4ad16aae5be4687593245232f7b1
+      internalID: -328844892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shield 2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 317
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 567e3b86457070c4d83e8c207a8ce75f
+      internalID: 686833899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shield 3
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 317
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415922db910479a4db0747d2395b3bce
+      internalID: -22179609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shield 4
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 317
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a832fef7d1b2514b92402cb62d254c3
+      internalID: -1283933632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shield 5
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 317
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c7a6350c44dc8409fe3ad8f670eb69
+      internalID: -215372191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning 8
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 400
+        width: 52
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5114380307ddd3643a8fe5ab7fb86373
+      internalID: -1249208575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike 0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 366
+        width: 45
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e32f27c70432c4593ade5d621dbb9f
+      internalID: 1457716902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front 0
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 410
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace4810bbb666344185a6ac6f2d83ba1
+      internalID: 237987195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front 1
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 401
+        width: 15
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d79bae05c72424bac1dd0a73c19b65
+      internalID: 185239065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front 2
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 390
+        width: 38
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3175106b7b77ca24988738ceb6acc952
+      internalID: -1652011170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front 3
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 373
+        width: 78
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3764e8e401bd9334f9d3b112979d2c8d
+      internalID: 37430733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front 4
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 370
+        width: 109
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896ee2777307c694abf9f928c7aeb91c
+      internalID: 1817505497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front 5
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 210
+        width: 132
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 783c8442e3af402469a4e9f4cd434e86
+      internalID: 1642812823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front 6
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 210
+        width: 166
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d674ae957ff100848a4cfd9c3713e36d
+      internalID: -606190203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front 7
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 214
+        width: 176
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1969ab8b3c325f4b8853142830b2889
+      internalID: 338743890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front 8
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 359
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd02887a7e1172439702a595bd318cd
+      internalID: 2064071718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion 0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 270
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b14da279259794fb3814e7003f1a79
+      internalID: -493746501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion 1
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 236
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7790d5306768bc94297cdecc249ae970
+      internalID: -1266629747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion 2
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 237
+        width: 56
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea61ed75d5ed4d468c70f28cfc3f37a
+      internalID: 425518869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion 3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 237
+        width: 61
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39968333f7f839499f0db1c4306811c
+      internalID: 1068170613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion 4
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 240
+        width: 61
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cffff2fd99efc9c4b8feb6dc724a381d
+      internalID: 470527157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion 5
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 236
+        width: 62
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95be707cc19ebd49a12418b98d51c79
+      internalID: -2012991311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion 6
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 234
+        width: 67
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf8224de8fdd6134ca47f828f1f416e0
+      internalID: 2111843447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion 7
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 233
+        width: 66
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4af3281da851cb4d9d14a3fbebd9d05
+      internalID: 1511141584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Weapon Effects_107: 2106514605
+      Weapon Effects_135: -408337141
+      Weapon Effects_117: 1466656970
+      Weapon Effects_118: -1072487992
+      Weapon Effects_19: -116948947
+      Weapon Effects_158: 1242737111
+      Weapon Effects_145: -511020858
+      Weapon Effects_157: 999048124
+      Explosion 3: 1068170613
+      Weapon Effects_96: -984304200
+      Weapon Effects_73: 2041142391
+      Weapon Effects_7: 683309155
+      Weapon Effects_54: 985964408
+      Weapon Effects_81: -2023308251
+      Weapon Effects_140: -1408381834
+      Weapon Effects_162: -1834722014
+      Weapon Effects_78: 1397378271
+      Shield 5: -215372191
+      Shield 0: -2082447722
+      Weapon Effects_110: 1996570051
+      Shield 4: -1283933632
+      Spike 3: 48047159
+      Weapon Effects_32: -1592239218
+      Shield 2: 686833899
+      Shield 3: -22179609
+      Weapon Effects_159: -1621092813
+      Weapon Effects_148: 977744074
+      Weapon Effects_106: 1024273995
+      Lightning 2: 584966405
+      Spike 0: 1457716902
+      Weapon Effects_67: 139930028
+      Weapon Effects_8: 684055510
+      Weapon Effects_111: 818915458
+      Shield 1: -328844892
+      Weapon Effects_58: 356829699
+      Weapon Effects_169: 1678343602
+      Lightning 5: 1933756912
+      Weapon Effects_55: 1753158023
+      Explosion 1: -1266629747
+      Weapon Effects_74: 23346220
+      Weapon Effects_34: -2019622884
+      Weapon Effects_26: 1715499606
+      Weapon Effects_126: -114613127
+      Weapon Effects_131: 1293752148
+      Weapon Effects_38: -1658048378
+      Weapon Effects_129: 1699049405
+      Weapon Effects_89: -1101660413
+      Weapon Effects_70: -951688202
+      Weapon Effects_48: 1288161443
+      Weapon Effects_101: -878336018
+      Explosion 4: 470527157
+      Weapon Effects_87: -290869120
+      Weapon Effects_14: -660899679
+      Weapon Effects_103: -917285344
+      Front 0: 237987195
+      Lightning 4: 151970210
+      Front 7: 338743890
+      Weapon Effects_83: -1951663013
+      Weapon Effects_27: 1455749569
+      Explosion 0: -493746501
+      Spike 6: 1004861425
+      Weapon Effects_150: 1011464747
+      Weapon Effects_20: 171790856
+      Weapon Effects_104: -2124935423
+      Weapon Effects_35: 1114645167
+      Weapon Effects_11: 667288074
+      Weapon Effects_33: -348302044
+      Weapon Effects_141: 1756647737
+      Weapon Effects_13: -1637702385
+      Weapon Effects_71: 1173942460
+      Weapon Effects_124: 618228337
+      Explosion 2: 425518869
+      Weapon Effects_51: 498940220
+      Weapon Effects_79: -1901305689
+      Weapon Effects_42: -66196948
+      Weapon Effects_68: 427596903
+      Weapon Effects_112: 376270095
+      Front 6: -606190203
+      Weapon Effects_41: -1617153512
+      Weapon Effects_17: 1128272150
+      Weapon Effects_125: 952506207
+      Weapon Effects_16: -1216306034
+      Weapon Effects_93: -1815041794
+      Weapon Effects_43: -1859897531
+      Lightning 0: 155617428
+      Weapon Effects_130: -1114198995
+      Weapon Effects_149: -1302081093
+      Weapon Effects_121: 745897605
+      Spike 2: 2026201028
+      Spike 5: 339426207
+      Weapon Effects_40: -772604954
+      Weapon Effects_133: 900041281
+      Weapon Effects_160: -1048039762
+      Weapon Effects_132: 2078693356
+      Weapon Effects_22: -1105066820
+      Weapon Effects_28: -1085928098
+      Weapon Effects_21: -1796445164
+      Weapon Effects_108: 971626354
+      Weapon Effects_102: 2122210952
+      Weapon Effects_9: -1380115780
+      Weapon Effects_82: -634164309
+      Weapon Effects_109: -1726700249
+      Weapon Effects_31: -747030765
+      Weapon Effects_97: 1338287661
+      Weapon Effects_66: -1896175155
+      Weapon Effects_168: -400067877
+      Lightning 3: -352576794
+      Weapon Effects_151: 92959659
+      Weapon Effects_167: -1985165160
+      Weapon Effects_23: -1035544022
+      Weapon Effects_72: -1997185846
+      Weapon Effects_84: 635024824
+      Weapon Effects_137: -140127566
+      Weapon Effects_152: 1167208254
+      Weapon Effects_15: -1425331668
+      Weapon Effects_163: 31923166
+      Weapon Effects_123: -932661146
+      Lightning 8: -1249208575
+      Weapon Effects_65: 1123581775
+      Weapon Effects_136: 1403540923
+      Weapon Effects_95: 938454307
+      Weapon Effects_153: 248604195
+      Front 4: 1817505497
+      Front 8: 2064071718
+      Weapon Effects_25: 573561171
+      Weapon Effects_37: 305505165
+      Spike 1: -1708357891
+      Weapon Effects_116: 157323260
+      Weapon Effects_80: -232805532
+      Lightning 6: -1961629800
+      Weapon Effects_144: -1985286536
+      Weapon Effects_166: -1818141918
+      Weapon Effects_120: 1217936444
+      Weapon Effects_92: -1944428323
+      Weapon Effects_24: -1456975809
+      Weapon Effects_39: -68154619
+      Weapon Effects_29: -1476872209
+      Weapon Effects_90: 1417751034
+      Explosion 6: 2111843447
+      Front 5: 1642812823
+      Weapon Effects_94: 326290781
+      Front 1: 185239065
+      Weapon Effects_18: -88039382
+      Weapon Effects_143: -1388166762
+      Weapon Effects_69: -443687185
+      Weapon Effects_46: 1812215723
+      Weapon Effects_146: -1228598126
+      Weapon Effects_170: 333076736
+      Weapon Effects_147: -362867470
+      Lightning 7: 1326875128
+      Weapon Effects_30: 581012771
+      Weapon Effects_161: -990244089
+      Front 2: -1652011170
+      Explosion 5: -2012991311
+      Weapon Effects_100: 1069796155
+      Weapon Effects_99: -8560169
+      Weapon Effects_64: 1936329246
+      Weapon Effects_128: -961273902
+      Weapon Effects_76: 1425937296
+      Weapon Effects_115: -1146010697
+      Lightning 1: -811975230
+      Weapon Effects_134: 495677857
+      Weapon Effects_88: -75638774
+      Weapon Effects_165: -1733127229
+      Weapon Effects_122: 213151787
+      Weapon Effects_77: -756737743
+      Weapon Effects_36: -2034433566
+      Weapon Effects_52: -1384602065
+      Weapon Effects_105: 128122197
+      Weapon Effects_75: -983012859
+      Weapon Effects_138: -577388008
+      Weapon Effects_154: 1515240176
+      Weapon Effects_156: -1681177666
+      Front 3: 37430733
+      Weapon Effects_85: 877392096
+      Weapon Effects_10: -186519472
+      Spike 7: 313671925
+      Weapon Effects_142: 195168240
+      Weapon Effects_171: -1541538316
+      Weapon Effects_155: 753199047
+      Spike 4: 1235490543
+      Weapon Effects_91: 767763630
+      Weapon Effects_113: -334961775
+      Weapon Effects_127: 1672423814
+      Weapon Effects_119: -824280032
+      Weapon Effects_139: -1382899968
+      Weapon Effects_164: 1452907180
+      Weapon Effects_86: 404002228
+      Explosion 7: 1511141584
+      Weapon Effects_114: -1202021765
+      Weapon Effects_98: -475800576
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
