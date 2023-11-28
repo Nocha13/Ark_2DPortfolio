@@ -34,7 +34,7 @@ ArkSurvivor
 
 다른 포트폴리오 보기
 ---
-[Project Merge](https://github.com/Nocha13/Merge.git)
+[Project Merge](https://github.com/Nocha13/Merge_2DPortfolio.git)
 
 주요 활용 기술
 ---
