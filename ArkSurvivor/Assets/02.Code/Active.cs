@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Active : MonoBehaviour
 {
-    public int id;          //¹«±â
-    public int prefabId;    //ÇÁ¸®ÆÕ
-    public float damage;    //µ¥¹ÌÁö
-    public int count;       //°¹¼ö
-    public float sp;        //¼Óµµ(±Ù°Å¸® - È¸Àü, ¿ø°Å¸® - ¿¬»ç¼Óµµ)
+    public int id;          //ë¬´ê¸°
+    public int prefabId;    //í”„ë¦¬íŒ¹
+    public float damage;    //ë°ë¯¸ì§€
+    public int count;       //ê°¯ìˆ˜
+    public float sp;        //ì†ë„(ê·¼ê±°ë¦¬ - íšŒì „, ì›ê±°ë¦¬ - ì—°ì‚¬ì†ë„)
 
-    PlayerCtrl player;     //ÇÃ·¹ÀÌ¾î º¯¼ö
-    SpriteRenderer sprite; //ÇÃ·¹ÀÌ¾î ½ºÇÁ¶óÀÌÆ®
+    PlayerCtrl player;     //í”Œë ˆì´ì–´ ë³€ìˆ˜
+    SpriteRenderer sprite; //í”Œë ˆì´ì–´ ìŠ¤í”„ë¼ì´íŠ¸
 
-    float timer;    //ÄğÅ¸ÀÓ
+    float timer;    //ì¿¨íƒ€ì„
 
     [HideInInspector] public bool isShield = false;
 
@@ -22,7 +22,7 @@ public class Active : MonoBehaviour
     void Awake()
     {
         Inst = this;
-        player = Game_Mgr.Inst.player;    //ºÎ¸ğ ÄÄÆ÷³ÍÆ® °¡Á®¿È
+        player = Game_Mgr.Inst.player;    //ë¶€ëª¨ ì»´í¬ë„ŒíŠ¸ ê°€ì ¸ì˜´
         sprite = PlayerCtrl.Inst.spriter;
     }
 
@@ -59,11 +59,11 @@ public class Active : MonoBehaviour
                 transform.Rotate(Vector3.zero);
                 if (GameObject.Find("Active 6").transform.Find("Shield(Clone)").gameObject.activeSelf == false)
                 {
-                    //Debug.Log("ºñÈ°¼º");
+                    //Debug.Log("ë¹„í™œì„±");
                     timer += Time.deltaTime;
                     if (timer > sp)
                     {
-                        //Debug.Log("È°¼º");
+                        //Debug.Log("í™œì„±");
                         Shield();
                         timer = 0;
                     }
@@ -110,18 +110,18 @@ public class Active : MonoBehaviour
 
     public void Init(ItemDatas data)
     {
-        #region //¿ÀºêÁ§Æ® ¼³Á¤
-        //±âº» ¼³Á¤
+        #region //ì˜¤ë¸Œì íŠ¸ ì„¤ì •
+        //ê¸°ë³¸ ì„¤ì •
         name = "Active " + data.itemId;
-        transform.parent = player.transform;    //ºÎ¸ğ = ÇÃ·¹ÀÌ¾î
-        transform.localPosition = Vector3.zero; //·ÎÄÃ À§Ä¡ ¿øÁ¡
+        transform.parent = player.transform;    //ë¶€ëª¨ = í”Œë ˆì´ì–´
+        transform.localPosition = Vector3.zero; //ë¡œì»¬ ìœ„ì¹˜ ì›ì 
 
-        //º¯°æ ¼³Á¤
+        //ë³€ê²½ ì„¤ì •
         id = data.itemId;
         damage = data.baseDamage * Characters.Damage;
         count = data.baseCount + Characters.Count;
 
-        //½ºÅ©¸³Æ® ¿ÀºêÁ§Æ® µ¶¸³¼º(ÀÎ´ì½º ¾Æ´Ñ ÇÁ¸®ÆéÀ¸·Î ¼³Á¤ÇÔ)
+        //ìŠ¤í¬ë¦½íŠ¸ ì˜¤ë¸Œì íŠ¸ ë…ë¦½ì„±(ì¸ëŒìŠ¤ ì•„ë‹Œ í”„ë¦¬í©ìœ¼ë¡œ ì„¤ì •í•¨)
         for (int idx = 0; idx < Game_Mgr.Inst.pool.prefabs.Length; idx++)
         {
             if (data.projectile == Game_Mgr.Inst.pool.prefabs[idx])
@@ -168,12 +168,12 @@ public class Active : MonoBehaviour
                 break;
         }
 
-        //Æ¯Á¤ ÇÔ¼ö È£Ãâ ÀÚ½Ä ¿ÀºêÁ§Æ®¿¡ ¾Ë¸²
+        //íŠ¹ì • í•¨ìˆ˜ í˜¸ì¶œ ìì‹ ì˜¤ë¸Œì íŠ¸ì— ì•Œë¦¼
         player.BroadcastMessage("ApplyGear", SendMessageOptions.DontRequireReceiver);
     }
 
-    #region //¸ŞÀÎ °ø°İ 
-    void Place()//°Ë
+    #region //ë©”ì¸ ê³µê²© 
+    void Place()//ê²€
     {
         for (int idx = 0; idx < count; idx++)
         {
@@ -183,7 +183,7 @@ public class Active : MonoBehaviour
             {
                 bullet = transform.GetChild(idx);
             }
-            else //±âÁ¸ ¿ÀºêÁ§Æ® ¸ÕÀú È°¿ë ÈÄ, Ç®¸µ¿¡¼­ °¡Á®(Ãß°¡)¿À±â
+            else //ê¸°ì¡´ ì˜¤ë¸Œì íŠ¸ ë¨¼ì € í™œìš© í›„, í’€ë§ì—ì„œ ê°€ì ¸(ì¶”ê°€)ì˜¤ê¸°
             {
                 bullet = Game_Mgr.Inst.pool.Get(prefabId).transform;
                 bullet.parent = transform;
@@ -195,33 +195,33 @@ public class Active : MonoBehaviour
             Vector3 rotVec = Vector3.forward * 360 * idx / count;
             bullet.Rotate(rotVec);
             bullet.Translate(bullet.up * 1.5f, Space.World);
-            bullet.GetComponent<Bullets>().Init(damage, -100); // -100 °üÅë·Â         
+            bullet.GetComponent<Bullets>().Init(damage, -100); // -100 ê´€í†µë ¥         
         }
     }
 
-    void Fire()//Å¸°Ù¸ÅÁ÷
+    void Fire()//íƒ€ê²Ÿë§¤ì§
     {
-        if (!player.scanner.nearestTarget)  //¸ñÇ¥ ¾øÀ¸¸é ¸®ÅÏ
+        if (!player.scanner.nearestTarget)  //ëª©í‘œ ì—†ìœ¼ë©´ ë¦¬í„´
             return;
 
-        Vector3 targetPos = player.scanner.nearestTarget.position;//Å¸°Ù
-        Vector3 dir = targetPos - transform.position;             //¹æÇâ
-        dir = dir.normalized;   //º¤ÅÍ ¹æÇâ À¯Áö, Å©±â 1
+        Vector3 targetPos = player.scanner.nearestTarget.position;//íƒ€ê²Ÿ
+        Vector3 dir = targetPos - transform.position;             //ë°©í–¥
+        dir = dir.normalized;   //ë²¡í„° ë°©í–¥ ìœ ì§€, í¬ê¸° 1
 
         Transform bullet = Game_Mgr.Inst.pool.Get(prefabId).transform;
         bullet.position = transform.position;
 
-        //ÁöÁ¤ Ãà Áß½ÉÀ¸·Î ¸ñÇ¥ ÇâÇØ È¸Àü
+        //ì§€ì • ì¶• ì¤‘ì‹¬ìœ¼ë¡œ ëª©í‘œ í–¥í•´ íšŒì „
         bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
         bullet.GetComponent<Bullets>().Init(damage, count, dir);
 
         AudioMgr.Inst.PlaySfx(AudioMgr.SFX.Range);
     }
 
-    void RandomFire()//·£´ı¸ÅÁ÷
+    void RandomFire()//ëœë¤ë§¤ì§
     {
-        Vector3 dir = new Vector3(Random.Range(-15, 15), Random.Range(-15, 15), 0);  //¹æÇâ
-        dir = dir.normalized;   //º¤ÅÍ ¹æÇâ À¯Áö, Å©±â 1
+        Vector3 dir = new Vector3(Random.Range(-15, 15), Random.Range(-15, 15), 0);  //ë°©í–¥
+        dir = dir.normalized;   //ë²¡í„° ë°©í–¥ ìœ ì§€, í¬ê¸° 1
 
         Transform bullet = Game_Mgr.Inst.pool.Get(prefabId).transform;
         bullet.position = transform.position;
@@ -231,7 +231,7 @@ public class Active : MonoBehaviour
         AudioMgr.Inst.PlaySfx(AudioMgr.SFX.Range);
     }
 
-    void FrontFire()//ÇÁ·ĞÆ® ¸ÅÁ÷
+    void FrontFire()//í”„ë¡ íŠ¸ ë§¤ì§
     {
         Vector3 dir = Vector3.right;
 
@@ -240,7 +240,7 @@ public class Active : MonoBehaviour
             dir = Vector3.left;
         }
 
-        dir = dir.normalized;   //º¤ÅÍ ¹æÇâ À¯Áö, Å©±â 1
+        dir = dir.normalized;   //ë²¡í„° ë°©í–¥ ìœ ì§€, í¬ê¸° 1
 
         Transform bullet = Game_Mgr.Inst.pool.Get(prefabId).transform;
         bullet.position = transform.position;
@@ -260,7 +260,10 @@ public class Active : MonoBehaviour
 
         AudioMgr.Inst.PlaySfx(AudioMgr.SFX.Front);
     }
-    void Lightning()//º­¶ô
+    #endregion
+
+    #region //ë³´ì¡° ê³µê²©
+    void Lightning()//ë²¼ë½
     {
         Transform bullet = Game_Mgr.Inst.pool.Get(prefabId).transform;
         bullet.position = player.transform.position + (Random.insideUnitSphere * 7f);
@@ -268,10 +271,8 @@ public class Active : MonoBehaviour
 
         AudioMgr.Inst.PlaySfx(AudioMgr.SFX.Lightning);
     }
-    #endregion
-
-    #region //º¸Á¶ °ø°İ
-    void Spike()//½ºÆÄÀÌÅ©
+    
+    void Spike()//ìŠ¤íŒŒì´í¬
     {
         Transform bullet = Game_Mgr.Inst.pool.Get(prefabId).transform;
         bullet.position = player.transform.position + (Random.insideUnitSphere * 5f);
@@ -281,8 +282,8 @@ public class Active : MonoBehaviour
     }
     #endregion
 
-    #region//º¸Á¶
-    void Shield()//½¯µå
+    #region//ë³´ì¡°
+    void Shield()//ì‰´ë“œ
     {
         Transform shleid;
 
@@ -295,7 +296,7 @@ public class Active : MonoBehaviour
         AudioMgr.Inst.PlaySfx(AudioMgr.SFX.Shield);
     }
 
-    void Explosion()//Àü¸ê
+    void Explosion()//ì „ë©¸
     {
         Transform bullet = Game_Mgr.Inst.pool.Get(prefabId).transform;
         bullet.position = transform.position;
@@ -314,7 +315,7 @@ public class Active : MonoBehaviour
         if (id == 0)
             Place();
 
-        //Æ¯Á¤ ÇÔ¼ö È£Ãâ ÀÚ½Ä ¿ÀºêÁ§Æ®¿¡ ¾Ë¸²
+        //íŠ¹ì • í•¨ìˆ˜ í˜¸ì¶œ ìì‹ ì˜¤ë¸Œì íŠ¸ì— ì•Œë¦¼
         player.BroadcastMessage("ApplyGear", SendMessageOptions.DontRequireReceiver);
     }
 }
