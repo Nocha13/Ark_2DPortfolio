@@ -167,6 +167,9 @@ void Update()
     public GameObject projectile;   //투사체
 ```
 </details>
+
+---
+* #05)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/Items.cs)) [아이템 업그레이드 구현]=
 <!---
 Nocha13/Nocha13 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
