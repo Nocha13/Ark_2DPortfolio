@@ -44,7 +44,45 @@ ArkSurvivor
 <summary>예시 코드</summary>
   
 ```csharp
+void OnTriggerExit2D(Collider2D coll)
+    {
+        if (!coll.CompareTag("Area"))
+            return;
 
+        Vector3 playerPos = Game_Mgr.Inst.player.transform.position;
+        Vector3 tilePos = transform.position;                           
+
+        switch (transform.tag)
+        {
+            case "Ground":
+
+                float diffX = playerPos.x - tilePos.x;
+                float diffY = playerPos.y - tilePos.y;
+     
+                float dirX = diffX < 0 ? -1 : 1;
+                float dirY = diffY < 0 ? -1 : 1;
+
+                diffX = Mathf.Abs(diffX);
+                diffY = Mathf.Abs(diffY);
+
+                if (Mathf.Abs(diffX - diffY) <= 0.1f)
+                {
+                    transform.Translate(Vector3.right * dirX * 60);
+                    transform.Translate(Vector3.up * dirY * 60);
+                }
+
+                else if (diffX > diffY)
+                {
+                    transform.Translate(Vector3.right * dirX * 60);
+                }
+                else if (diffX < diffY)
+                {
+                    transform.Translate(Vector3.up * dirY * 60);
+                }
+                break;
+}
+}
+}
 ```
 
 </details>
