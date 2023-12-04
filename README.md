@@ -84,6 +84,29 @@ ArkSurvivor
     }
 }
 ```
+
+---
+* #02)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/EnemyCtrl.cs#L37)) [적 플레이어 자동 추적]
+
+<details>
+<summary>예시 코드</summary>
+  
+```csharp
+    void FixedUpdate()
+    {
+        if (!Game_Mgr.Inst.isLive)
+            return;
+
+        if (!isLive || anim.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
+            return;
+
+        Vector2 dirVec = target.position - rigid.position;
+        Vector2 nextVec = dirVec.normalized * sp * Time.fixedDeltaTime;
+        rigid.MovePosition(rigid.position + nextVec);
+        rigid.velocity = Vector2.zero;
+    }
+```
+</details>
 </details>
 <!---
 Nocha13/Nocha13 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
