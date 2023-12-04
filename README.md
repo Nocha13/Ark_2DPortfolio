@@ -181,7 +181,7 @@ ArkSurvivor
 * #08)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/Items.cs)) [능력 업그레이드]
 
 ---
-* #09)([스크립트01](https://github.com/Nocha13/Ark_2DPortfolio/edit/main/ArkSurvivor/Assets/02.Code/Game_Mgr.cs#L62))([스크립트02](https://github.com/Nocha13/Ark_2DPortfolio/edit/main/ArkSurvivor/Assets/02.Code/Game_Mgr.cs#L33)) [플레이어 캐릭 선택]
+* #09)([스크립트01](https://github.com/Nocha13/Ark_2DPortfolio/edit/main/ArkSurvivor/Assets/02.Code/Game_Mgr.cs#L62))([스크립트02](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/PlayerCtrl.cs#L33)) [플레이어 캐릭 선택]
 
 <details>
 <summary>예시 코드</summary>
