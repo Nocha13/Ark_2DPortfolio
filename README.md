@@ -84,6 +84,7 @@ ArkSurvivor
     }
 }
 ```
+</details>
 
 ---
 * #02)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/EnemyCtrl.cs#L37)) [적 플레이어 자동 추적]
@@ -106,7 +107,6 @@ ArkSurvivor
         rigid.velocity = Vector2.zero;
     }
 ```
-</details>
 </details>
 <!---
 Nocha13/Nocha13 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
