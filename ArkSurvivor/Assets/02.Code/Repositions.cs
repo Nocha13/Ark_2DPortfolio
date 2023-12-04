@@ -43,7 +43,7 @@ public class Repositions : MonoBehaviour
                 {
                     transform.Translate(Vector3.right * dirX * 60);
                 }
-                else if (diffX < diffY) //수직 이
+                else if (diffX < diffY) //수직 이동
                 {
                     transform.Translate(Vector3.up * dirY * 60);
                 }
