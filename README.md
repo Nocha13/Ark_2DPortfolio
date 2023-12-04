@@ -197,6 +197,9 @@ ArkSurvivor
 ---
 * #10)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/edit/main/ArkSurvivor/Assets/02.Code/AchieveMgr.cs)) [업접 달성 캐릭터 해금]
 
+---
+* #)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/AudioMgr.cs)) [게임 오디오 구현]
+
 <!---
 Nocha13/Nocha13 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
