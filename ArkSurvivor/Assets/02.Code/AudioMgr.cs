@@ -42,24 +42,24 @@ public class AudioMgr : MonoBehaviour
     [HideInInspector] public bool isBgmOnOff = true;
     [HideInInspector] public bool isSfxOnOff = true;
 
-    [Header("Title")] //Å¸ÀÌÆ²À½ °ü·Ã
+    [Header("Title")] //íƒ€ì´í‹€ìŒ ê´€ë ¨
     public AudioClip titleClip;
     AudioSource titlePlayer = null;
     public float titleVol = 1;
 
-    [Header("BGM")] //¹è°æÀ½ °ü·Ã
+    [Header("BGM")] //ë°°ê²½ìŒ ê´€ë ¨
     public AudioClip bgmClip;
     AudioSource bgmPlayer = null;
     public float bgmVol = 1;
-    AudioLowPassFilter highPass;   //ÀúÀ½¿ª´ë Åë°ú
+    AudioLowPassFilter highPass;   //ì €ìŒì—­ëŒ€ í†µê³¼
 
-    [Header("SFX")] //È¿°úÀ½ °ü·Ã
+    [Header("SFX")] //íš¨ê³¼ìŒ ê´€ë ¨
     public AudioClip[] sfxClip;
     AudioSource[] sfxPlayer = null;
     public float sfxVol = 1;
 
-    public int channels;    //Ã¤³Î ¼ö
-    int chIdx;              //Ã¤³Î ¹øÈ£
+    public int channels;    //ì±„ë„ ìˆ˜
+    int chIdx;              //ì±„ë„ ë²ˆí˜¸
 
     void Awake()
     {
@@ -69,20 +69,21 @@ public class AudioMgr : MonoBehaviour
 
     void Start()
     {
-        if (BGMToggle != null)
+        if (BGMToggle != null)    //BGM í† ê¸€
             BGMToggle.onValueChanged.AddListener(BGMOnOff);
 
-        if (SFXToggle != null)
+        if (SFXToggle != null)    //SFX í† ê¸€
             SFXToggle.onValueChanged.AddListener(SFXOnOff);
-
-        if (BGMSlider != null)
+    
+        if (BGMSlider != null)    //BGM ìŠ¬ë¼ì´ë”
             BGMSlider.onValueChanged.AddListener(BSliderChange);
 
-        if (SFXSlider != null)
+        if (SFXSlider != null)    //SFX ìŠ¬ë¼ì´ë”
             SFXSlider.onValueChanged.AddListener(SSliderChange);
 
         int a_bgmOnOff = PlayerPrefs.GetInt("BgmOnOff", 1);
         int a_sfxOnOff = PlayerPrefs.GetInt("SfxOnOff", 1);
+        
         if (BGMToggle != null || SFXToggle != null)
         {
             if (a_bgmOnOff == 1)
@@ -103,6 +104,7 @@ public class AudioMgr : MonoBehaviour
             SFXSlider.value = PlayerPrefs.GetFloat("SFXVolume", 0);
     }
 
+    //ìŠ¬ë¼ì´ë” ë³¼ë¥¨
     public void BGMCtrl()
     {
         float sound = BGMSlider.value;
@@ -112,7 +114,7 @@ public class AudioMgr : MonoBehaviour
         else
             masterMixer.SetFloat("BGM", sound);
     }
-
+    //ìŠ¬ë¼ì´ë” ë³¼ë¥¨
     public void SFXCtrl()
     {
         float sound = SFXSlider.value;
@@ -200,45 +202,45 @@ public class AudioMgr : MonoBehaviour
         sfxVol = sVolume;
     }
 
-    void Init() //ÇÃ·¹ÀÌ¾î ÃÊ±âÈ­
+    void Init() //í”Œë ˆì´ì–´ ì´ˆê¸°í™”
     {
         //Title
         GameObject titleObj = new GameObject("TitlePlayer");
-        titleObj.transform.parent = transform;                      //Å¸ÀÌÆ²À½ ÀÚ½Ä ¿ÀºêÁ§Æ® »ı¼º
-        titlePlayer = titleObj.AddComponent<AudioSource>();         //ÄÄÆ÷³ÍÆ® ¿Àµğ¿À¼Ò½º »ı¼º 
-        titlePlayer.playOnAwake = false;                            //½ÃÀÛ½Ã Àç»ı OFF
-        titlePlayer.loop = true;                                    //Å¸ÀÌÆ²À½ ¹İº¹ ON
-        titlePlayer.volume = titleVol;                              //º¼·ı
-        titlePlayer.clip = titleClip;                               //À½¿ø ÆÄÀÏ
+        titleObj.transform.parent = transform;                      //íƒ€ì´í‹€ìŒ ìì‹ ì˜¤ë¸Œì íŠ¸ ìƒì„±
+        titlePlayer = titleObj.AddComponent<AudioSource>();         //ì»´í¬ë„ŒíŠ¸ ì˜¤ë””ì˜¤ì†ŒìŠ¤ ìƒì„± 
+        titlePlayer.playOnAwake = false;                            //ì‹œì‘ì‹œ ì¬ìƒ OFF
+        titlePlayer.loop = true;                                    //íƒ€ì´í‹€ìŒ ë°˜ë³µ ON
+        titlePlayer.volume = titleVol;                              //ë³¼ë¥¨
+        titlePlayer.clip = titleClip;                               //ìŒì› íŒŒì¼
         titlePlayer.outputAudioMixerGroup = masterMixer.FindMatchingGroups("BGM")[0];
 
         //BGM 
         GameObject bgmObj = new GameObject("BGMPlayer");
-        bgmObj.transform.parent = transform;                        //¹è°æÀ½ ÀÚ½Ä ¿ÀºêÁ§Æ® »ı¼º
-        bgmPlayer = bgmObj.AddComponent<AudioSource>();             //ÄÄÆ÷³ÍÆ® ¿Àµğ¿À¼Ò½º »ı¼º     
-        bgmPlayer.playOnAwake = false;                              //½ÃÀÛ½Ã Àç»ı OFF
-        bgmPlayer.loop = true;                                      //¹è°æÀ½ ¹İº¹ ON
-        bgmPlayer.volume = bgmVol;                                  //º¼·ı
-        bgmPlayer.clip = bgmClip;                                   //À½¿ø ÆÄÀÏ
+        bgmObj.transform.parent = transform;                        //ë°°ê²½ìŒ ìì‹ ì˜¤ë¸Œì íŠ¸ ìƒì„±
+        bgmPlayer = bgmObj.AddComponent<AudioSource>();             //ì»´í¬ë„ŒíŠ¸ ì˜¤ë””ì˜¤ì†ŒìŠ¤ ìƒì„±     
+        bgmPlayer.playOnAwake = false;                              //ì‹œì‘ì‹œ ì¬ìƒ OFF
+        bgmPlayer.loop = true;                                      //ë°°ê²½ìŒ ë°˜ë³µ ON
+        bgmPlayer.volume = bgmVol;                                  //ë³¼ë¥¨
+        bgmPlayer.clip = bgmClip;                                   //ìŒì› íŒŒì¼
         highPass = Camera.main.GetComponent<AudioLowPassFilter>();
         bgmPlayer.outputAudioMixerGroup = masterMixer.FindMatchingGroups("BGM")[0];
 
         //SFX 
         GameObject sfxObj = new GameObject("SFXPlayer");
-        sfxObj.transform.parent = transform;                        //¹è°æÀ½ ÀÚ½Ä ¿ÀºêÁ§Æ® »ı¼º
-        sfxPlayer = new AudioSource[channels];                      //Ã¤³Î °ª ÀÌ¿ë, ¿Àµğ¿À¼Ò½º ¹è¿­ ÃÊ±âÈ­
+        sfxObj.transform.parent = transform;                        //ë°°ê²½ìŒ ìì‹ ì˜¤ë¸Œì íŠ¸ ìƒì„±
+        sfxPlayer = new AudioSource[channels];                      //ì±„ë„ ê°’ ì´ìš©, ì˜¤ë””ì˜¤ì†ŒìŠ¤ ë°°ì—´ ì´ˆê¸°í™”
 
         for (int idx = 0; idx < sfxPlayer.Length; idx++)
         {
-            sfxPlayer[idx] = sfxObj.AddComponent<AudioSource>();    //¸ğµç È¿°úÀ½ ¿Àµğ¿À¼Ò½º »ı¼º, ÀúÀå ¹İº¹
-            sfxPlayer[idx].playOnAwake = false;                     //½ÃÀÛ½Ã Àç»ı OFF
-            sfxPlayer[idx].bypassListenerEffects = true;            //AudioLowPassFilter ¿µÇâ ¹ŞÁö ¾Êµµ·Ï ON
-            sfxPlayer[idx].volume = sfxVol;                         //º¼·ı
+            sfxPlayer[idx] = sfxObj.AddComponent<AudioSource>();    //ëª¨ë“  íš¨ê³¼ìŒ ì˜¤ë””ì˜¤ì†ŒìŠ¤ ìƒì„±, ì €ì¥ ë°˜ë³µ
+            sfxPlayer[idx].playOnAwake = false;                     //ì‹œì‘ì‹œ ì¬ìƒ OFF
+            sfxPlayer[idx].bypassListenerEffects = true;            //AudioLowPassFilter ì˜í–¥ ë°›ì§€ ì•Šë„ë¡ ON
+            sfxPlayer[idx].volume = sfxVol;                         //ë³¼ë¥¨
             sfxPlayer[idx].outputAudioMixerGroup = masterMixer.FindMatchingGroups("SFX")[0];
         }
     }
 
-    public void TitleBgm(bool isPlay)
+    public void TitleBgm(bool isPlay) //íƒ€ì´í‹€
     {
         if (isPlay)
         {
@@ -251,7 +253,7 @@ public class AudioMgr : MonoBehaviour
         }
     }
 
-    public void PlayBgm(bool isPlay)
+    public void PlayBgm(bool isPlay)    //í”Œë ˆì´ì´
     {
         if (isPlay)
         {
@@ -284,13 +286,13 @@ public class AudioMgr : MonoBehaviour
     {
         for (int idx = 0; idx < sfxPlayer.Length; idx++)
         {
-            //Ã¤³Î ¼ö¸¸Å­ ¼øÈ¸
+            //ì±„ë„ ìˆ˜ë§Œí¼ ìˆœíšŒ
             int loopIdx = (idx + chIdx) % sfxPlayer.Length;
 
             if (sfxPlayer[loopIdx].isPlaying)
-                continue;    //¹İº¹¹® [´ÙÀ½ ·çÇÁ]·Î °Ç³Ê¶Ü
+                continue;    //ë°˜ë³µë¬¸ [ë‹¤ìŒ ë£¨í”„]ë¡œ ê±´ë„ˆëœ€
 
-            int ranIdx = 0; //°°Àº ÀÌ¸§ È¿°úÀ½ ·£´ı Àç»ı
+            int ranIdx = 0; //ê°™ì€ ì´ë¦„ íš¨ê³¼ìŒ ëœë¤ ì¬ìƒ
             if (sfx == SFX.Hit || sfx == SFX.Melee)
             {
                 ranIdx = Random.Range(0, 2);
@@ -299,7 +301,7 @@ public class AudioMgr : MonoBehaviour
             chIdx = loopIdx;
             sfxPlayer[loopIdx].clip = sfxClip[(int)sfx + ranIdx];
             sfxPlayer[loopIdx].Play();
-            break;          //È¿°úÀ½ Àç»ı ÈÄ ¹İº¹¹® Á¾·á
+            break;          //íš¨ê³¼ìŒ ì¬ìƒ í›„ ë°˜ë³µë¬¸ ì¢…ë£Œ
         }
     }
 
