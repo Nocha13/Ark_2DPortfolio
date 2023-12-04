@@ -6,24 +6,24 @@ public class Spawn : MonoBehaviour
 {
     public Transform[] Points;
     public SpawnData[] spawnData;
-    [HideInInspector] public float spawnTime; //¼ÒÈ¯ ·¹º§ ±¸°£ °áÁ¤
+    [HideInInspector] public float spawnTime; //ì†Œí™˜ ë ˆë²¨ êµ¬ê°„ ê²°ì •
 
-    int level;              //¼ÒÈ¯ ·¹º§
-    [HideInInspector] public float timer;     //½ºÆù Å¸ÀÌ¸Ó
+    int level;              //ì†Œí™˜ ë ˆë²¨
+    [HideInInspector] public float timer;     //ìŠ¤í° íƒ€ì´ë¨¸
 
-    //¸ó½ºÅÍ ¿şÀÌºê
-    public float waveTime;  //¿şÀÌºê ¼ÒÈ¯ ±¸°£ 
-    public float waveTimer; //¿şÀÌºê ½ºÆù Å¸ÀÌ¸Ó
+    //ëª¬ìŠ¤í„° ì›¨ì´ë¸Œ
+    public float waveTime;  //ì›¨ì´ë¸Œ ì†Œí™˜ êµ¬ê°„ 
+    public float waveTimer; //ì›¨ì´ë¸Œ ìŠ¤í° íƒ€ì´ë¨¸
     public int waveLength;
 
     void Awake()
     {
         Points = GetComponentsInChildren<Transform>();
         spawnTime = Game_Mgr.Inst.maxGameTime / spawnData.Length;
-        //½ºÆù ½Ã°£ = ÃÖ´ë °ÔÀÓ ½Ã°£ / ¸ó½ºÅÍ Å¸ÀÔ ¼ö
+        //ìŠ¤í° ì‹œê°„ = ìµœëŒ€ ê²Œì„ ì‹œê°„ / ëª¬ìŠ¤í„° íƒ€ì… ìˆ˜
 
         waveTime = Game_Mgr.Inst.maxGameTime / waveLength;
-        //¿şÀÌºê ÁÖ±â = ÃÖ´ë °ÔÀÓ ½Ã°£ / ¼ö
+        //ì›¨ì´ë¸Œ ì£¼ê¸° = ìµœëŒ€ ê²Œì„ ì‹œê°„ / ìˆ˜
     }
 
     void Update()
@@ -33,7 +33,7 @@ public class Spawn : MonoBehaviour
 
         timer += Time.deltaTime;
         waveTimer += Time.deltaTime;
-        level = Mathf.Min(Mathf.FloorToInt(Game_Mgr.Inst.gameTime / spawnTime), spawnData.Length - 1);  //ÀÎµ¦½º ¿¡·¯ °íÄ§
+        level = Mathf.Min(Mathf.FloorToInt(Game_Mgr.Inst.gameTime / spawnTime), spawnData.Length - 1);  //ì¸ë±ìŠ¤ ì—ëŸ¬ ê³ ì¹¨
 
         if (timer > spawnData[level].c_spawnTime)
         {
@@ -57,19 +57,19 @@ public class Spawn : MonoBehaviour
 
         if (spawnData[level].c_spriteType == 0)
         {
-            //Debug.Log("¿ş");
+            //Debug.Log("ì›¨");
             spawnData[level].c_spawnTime = 0.7f;
         }
 
         if (spawnData[level].c_spriteType == 1)
         {
-            //Debug.Log("ÀÌ");
+            //Debug.Log("ì´");
             spawnData[level].c_spawnTime = 0.5f;
         }
 
         if (spawnData[level].c_spriteType == 2)
         {
-            //Debug.Log("ºê");
+            //Debug.Log("ë¸Œ");
             spawnData[level].c_spawnTime = 0.3f;
         }
 
@@ -84,12 +84,12 @@ public class Spawn : MonoBehaviour
     }
 }
 
-[System.Serializable]
+[System.Serializable] //ë°ì´í„° ì§ë ¬í™”
 public class SpawnData
 {
-    public float c_spawnTime; //½ºÆù ½Ã°£
-    public int c_spriteType;  //¸ó½ºÅÍ Å¸ÀÔ
-    public int c_hp;          //Ã¼·Â
-    public float c_sp;        //¼Óµµ
-    public int c_damage;      //µ¥¹ÌÁö
+    public float c_spawnTime; //ìŠ¤í° ì‹œê°„
+    public int c_spriteType;  //ëª¬ìŠ¤í„° íƒ€ì…
+    public int c_hp;          //ì²´ë ¥
+    public float c_sp;        //ì†ë„
+    public int c_damage;      //ë°ë¯¸ì§€
 }
