@@ -140,6 +140,33 @@ void Update()
     }
 ```
 </details>
+
+---
+* #04)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/ItemDatas.cs)) [아이템, 스킬 데이터 구현]
+
+<details>
+<summary>예시 코드</summary>
+  
+```csharp
+     [Header("# Info")]
+    public ItemType itemType;
+    public int itemId;
+    public string itemName;
+
+    [TextArea]
+    public string itemDesc;
+    public Sprite itemIcon;
+
+    [Header("# Level")]
+    public float baseDamage;        //기본 데미지
+    public int baseCount;           //기본(근거리 - 갯수, 원거리 - 관통)
+    public float[] damages;         //추가 데미지
+    public int[] counts;            //추가(근거리 - 갯수, 원거리 - 관통)
+
+    [Header("# Weapon")]
+    public GameObject projectile;   //투사체
+```
+</details>
 <!---
 Nocha13/Nocha13 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
