@@ -113,7 +113,7 @@ ArkSurvivor
 * #03)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/PoolMgr.cs)) [적 오브젝트 풀링 구현]
 
 ---
-* #04)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/Spawn.cs#L29)) [시간에 따른 적 데이터]
+* #04)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/Spawn.cs#L29)) [시간에 따른 적 스폰 데이터]
 
 <details>
 <summary>예시 코드</summary>
