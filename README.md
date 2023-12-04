@@ -147,6 +147,9 @@ ArkSurvivor
 ---
 * #05)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/edit/main/ArkSurvivor/Assets/02.Code/Active.cs#L175)) [스킬 능력 구현]
 
+---
+* #06)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/Passive.cs#L43)) [패시브 능력 구현]
+
 
 <!---
 Nocha13/Nocha13 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
