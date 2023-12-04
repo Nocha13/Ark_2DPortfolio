@@ -17,16 +17,17 @@ public class Repositions : MonoBehaviour
         if (!coll.CompareTag("Area"))
             return;
 
-        Vector3 playerPos = Game_Mgr.Inst.player.transform.position;
-        Vector3 tilePos = transform.position;                           
-
+        Vector3 playerPos = Game_Mgr.Inst.player.transform.position; //플레이어 위치
+        Vector3 tilePos = transform.position;                        //타일 맵 위치
+        
         switch (transform.tag)
         {
             case "Ground":
 
-                float diffX = playerPos.x - tilePos.x;
-                float diffY = playerPos.y - tilePos.y;
-     
+                float diffX = playerPos.x - tilePos.x;    //좌표 X
+                float diffY = playerPos.y - tilePos.y;    //좌표 Y
+
+                //3항 연산
                 float dirX = diffX < 0 ? -1 : 1;
                 float dirY = diffY < 0 ? -1 : 1;
 
