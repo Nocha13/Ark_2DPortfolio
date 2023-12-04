@@ -88,7 +88,7 @@ ArkSurvivor
 </details>
 
 ---
-* #01)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/EnemyCtrl.cs)) [적 플레이어 자동 추]
+* #02)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/EnemyCtrl.cs)) [적 플레이어 자동 추적]
   
 <details>
 <summary>예시 코드</summary>
