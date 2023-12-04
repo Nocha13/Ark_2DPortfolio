@@ -15,17 +15,17 @@ public class Game_Mgr : MonoBehaviour
     public GameObject AllClear;
 
     [Header("Player Info")]
-    public int playerId;                //Ä³¸¯ÅÍ ID
-    public float hp;                    //Ã¼·Â
-    public float maxHp = 100;           //ÃÖ´ëÃ¼·Â
-    public int level;                   //¼ÒÈ¯ ·¹º§
-    public int kill;                    //Ã³Ä¡ ¼ö
-    public int exp;                     //°æÇèÄ¡
-    public int[] nextExp = { 3, 5, 10, 50, 130, 190, 230, 290, 370, 500 }; //ÇÊ¿ä °æÇèÄ¡
+    public int playerId;                //ìºë¦­í„° ID
+    public float hp;                    //ì²´ë ¥
+    public float maxHp = 100;           //ìµœëŒ€ì²´ë ¥
+    public int level;                   //ì†Œí™˜ ë ˆë²¨
+    public int kill;                    //ì²˜ì¹˜ ìˆ˜
+    public int exp;                     //ê²½í—˜ì¹˜
+    public int[] nextExp = { 3, 5, 10, 50, 130, 190, 230, 290, 370, 500 }; //í•„ìš” ê²½í—˜ì¹˜
     
     [Header("Game Ctrl")]
-    public float gameTime;              //°ÔÀÓ½Ã°£
-    public float maxGameTime = 3 * 10f; //°ÔÀÓ ÃÖ´ë ½Ã°£
+    public float gameTime;              //ê²Œì„ì‹œê°„
+    public float maxGameTime = 3 * 10f; //ê²Œì„ ìµœëŒ€ ì‹œê°„
     public bool isLive;
     public bool isStart;
 
@@ -59,6 +59,7 @@ public class Game_Mgr : MonoBehaviour
         }
     }
 
+    // ORDER : #09) í”Œë ˆì´ì–´ ìºë¦­í„° ì„ íƒ
     public void GameStart(int a_id)
     {
         AudioMgr.Inst.PlaySfx(AudioMgr.SFX.Join);
@@ -74,8 +75,7 @@ public class Game_Mgr : MonoBehaviour
         hp = maxHp;
         player.gameObject.SetActive(true);
 
-        UILevel.Sel(playerId % 2);
-        //Resume();
+        UILevel.Sel(playerId % 2); //ë¬´ê¸° ìˆ˜
     }
 
     public void GameReStart()
@@ -158,7 +158,7 @@ public class Game_Mgr : MonoBehaviour
         //#if UNITY_EDITOR
         //    UnityEditor.EditorApplication.isPlaying = false;
         //#else
-        //    Application.Quit(); // ¾îÇÃ¸®ÄÉÀÌ¼Ç Á¾·á
+        //    Application.Quit(); // ì–´í”Œë¦¬ì¼€ì´ì…˜ ì¢…ë£Œ
         //#endif
     }
 
