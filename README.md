@@ -57,51 +57,30 @@ ArkSurvivor
             case "Ground":
 
                 float diffX = playerPos.x - tilePos.x;
-                float diffY = playerPos.y - 현]
+                float diffY = playerPos.y - tilePos.y;
+     
+                float dirX = diffX < 0 ? -1 : 1;
+                float dirY = diffY < 0 ? -1 : 1;
 
-<details>
-<summary>예시 코드</summary>
-  
-```csharp
- public class PoolMgr : MonoBehaviour
-{
-    //프리팹 보관 변수
-    public GameObject[] prefabs;
+                diffX = Mathf.Abs(diffX);
+                diffY = Mathf.Abs(diffY);
 
-    //풀 담당 리스트
-    List<GameObject>[] pools;
-    void Awake()
-    {
-        pools = new List<GameObject>[prefabs.Length];
+                if (Mathf.Abs(diffX - diffY) <= 0.1f)
+                {
+                    transform.Translate(Vector3.right * dirX * 60);
+                    transform.Translate(Vector3.up * dirY * 60);
+                }
 
-        for (int idx = 0; idx < pools.Length; idx++)
-        {   //풀 리스트 초기화
-            pools[idx] = new List<GameObject>();
-        }
-    }
-
-    public GameObject Get(int index)
-    {
-        GameObject sel = null;
-
-        //선택한 풀의 비활성화 오브젝트에 접근
-        foreach (GameObject item in pools[index])
-        {   //발견시 sel변수에 할당
-            if (!item.activeSelf)
-            {
-                sel = item;
-                sel.SetActive(true);
+                else if (diffX > diffY)
+                {
+                    transform.Translate(Vector3.right * dirX * 60);
+                }
+                else if (diffX < diffY)
+                {
+                    transform.Translate(Vector3.up * dirY * 60);
+                }
                 break;
-            }
         }
-        //못 찾을시
-        if (!sel)
-        {   //새롭게 생성, sel변수에 할당
-            sel = Instantiate(prefabs[index], transform);
-            pools[index].Add(sel);
-        }
-
-        return sel;
     }
 }
 ```
