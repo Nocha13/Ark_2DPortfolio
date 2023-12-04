@@ -52,7 +52,7 @@ public class AchieveMgr : MonoBehaviour
 
     void LateUpdate()
     {
-        foreach (Achieve achive in achives)  //¸ğµç ¾÷Àû È®ÀÎ
+        foreach (Achieve achive in achives)  //ëª¨ë“  ì—…ì  í™•ì¸
         {
             AchiveCheck(achive);
         }
@@ -64,22 +64,22 @@ public class AchieveMgr : MonoBehaviour
 
         switch (achieve)
         {
-            case Achieve.UnlockSkadi:   //30¸¶¸® Ã³Ä¡½Ã
+            case Achieve.UnlockSkadi:   //30ë§ˆë¦¬ ì²˜ì¹˜ì‹œ
                 isAchieve = Game_Mgr.Inst.kill >= 30;   
                 break;
 
-            case Achieve.UnlockOther:   //¹ø »ì¾Æ³²±â ¿Ï·á½Ã
+            case Achieve.UnlockOther:   //1ë²ˆ ì‚´ì•„ë‚¨ê¸° ì™„ë£Œì‹œ
                 isAchieve = Game_Mgr.Inst.gameTime == Game_Mgr.Inst.maxGameTime;
                 break;
         }
         
-        if(isAchieve && PlayerPrefs.GetInt(achieve.ToString()) == 0)    //Ã³À½ ¾÷Àû ´Ş¼º½Ã
+        if(isAchieve && PlayerPrefs.GetInt(achieve.ToString()) == 0)    //ì²˜ìŒ ì—…ì  ë‹¬ì„±ì‹œ
         {
-            PlayerPrefs.SetInt(achieve.ToString(), 1);  //¾÷Àû ´Ş¼º½Ã
+            PlayerPrefs.SetInt(achieve.ToString(), 1);  //ì—…ì  ë‹¬ì„±ì‹œ
 
             for(int idx = 0; idx < uiNotification.transform.childCount; idx++)
             {
-                bool isActive = idx == (int)achieve;    //¾Ë¸² Ã¢ ÀÚ½Ä ¿ÀºêÁ§Æ® ¼øÈ¸, ¼ø¹ø ¸ÂÀ¸¸é È°¼ºÈ­
+                bool isActive = idx == (int)achieve;    //ì•Œë¦¼ ì°½ ìì‹ ì˜¤ë¸Œì íŠ¸ ìˆœíšŒ, ìˆœë²ˆ ë§ìœ¼ë©´ í™œì„±í™”
                 uiNotification.transform.GetChild(idx).gameObject.SetActive(isActive);
             }
 
