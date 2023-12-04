@@ -34,7 +34,7 @@ public class EnemyCtrl : MonoBehaviour
         anim = GetComponent<Animator>();
         wait = new WaitForFixedUpdate();
     }
-    // ORDER : #02)적 플레이어 자동 추적
+    // ORDER : #02) 적 플레이어 자동 추적
     void FixedUpdate()
     {
         if (!Game_Mgr.Inst.isLive)
