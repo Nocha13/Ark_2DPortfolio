@@ -88,7 +88,7 @@ public class AchieveMgr : MonoBehaviour
             
     }
 
-    IEnumerator NotifiRoutine()
+    IEnumerator NotifiRoutine()    //알림창
     {
         uiNotification.SetActive(true);
 
