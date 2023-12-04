@@ -5,28 +5,28 @@ using UnityEngine;
 public class Passive : MonoBehaviour
 {
     public ItemDatas.ItemType type;
-    public float val;                   //ÆĞ½Ãºê Å¸ÀÔ, ¼öÄ¡ º¯°æ
+    public float val;                   //íŒ¨ì‹œë¸Œ íƒ€ì…, ìˆ˜ì¹˜ ë³€ê²½
 
-    public void Init(ItemDatas data)    //ÆĞ½Ãºê Ãß°¡
+    public void Init(ItemDatas data)    //íŒ¨ì‹œë¸Œ ì¶”ê°€
     {
-        //±âº» ¼³Á¤
+        //ê¸°ë³¸ ì„¤ì •
         name = "Passive " + data.itemId;
         transform.parent = Game_Mgr.Inst.player.transform;
         transform.localPosition = Vector3.zero;
 
-        //º¯°æ ¼³Á¤
+        //ë³€ê²½ ì„¤ì •
         type = data.itemType;
         val = data.damages[0];
         ApplyPassive();
     }
 
-    public void LevelUp(float a_val)    //·¹º§¾÷
+    public void LevelUp(float a_val)    //ë ˆë²¨ì—…
     {
         val = a_val;
         ApplyPassive();
     }
 
-    void ApplyPassive()//ÆĞ½Ãºê °ü¸®(ÆĞ½Ãºê Ãß°¡, ·¹º§¾÷ ½Ã Àû¿ë)
+    void ApplyPassive()//íŒ¨ì‹œë¸Œ ê´€ë¦¬(íŒ¨ì‹œë¸Œ ì¶”ê°€, ë ˆë²¨ì—… ì‹œ ì ìš©)
     {
         switch (type)
         {
@@ -40,7 +40,8 @@ public class Passive : MonoBehaviour
         }
     }
 
-    void RateUp()   //±Ù°Å¸® È¸Àü¼Óµµ, ¿ø°Å¸® ¿¬»ç¼Óµµ
+    // ORDER : #06) íŒ¨ì‹œë¸Œ ëŠ¥ë ¥ êµ¬í˜„
+    void RateUp()   //ê·¼ê±°ë¦¬ íšŒì „ì†ë„, ì›ê±°ë¦¬ ì—°ì‚¬ì†ë„
     {
         Active[] weapons = transform.parent.GetComponentsInChildren<Active>();
 
@@ -48,42 +49,42 @@ public class Passive : MonoBehaviour
         {
             switch (weapon.id)
             {
-                case 0:                             //±Ù°Å¸®
+                case 0:                             //ê·¼ê±°ë¦¬
                     float a_Sp = 150 * Characters.RotSp;
                     weapon.sp = a_Sp + (a_Sp * val);
                     break;
 
-                case 1:                            //¿ø°Å¸®(Å¸°Ù)
+                case 1:                            //ì›ê±°ë¦¬(íƒ€ê²Ÿ)
                     a_Sp = (float)(0.7f * Characters.FireCool);
                     weapon.sp = a_Sp * (1f - val);
                     break;
 
-                case 5:                            //¿ø°Å¸®(·£´ı)
+                case 5:                            //ì›ê±°ë¦¬(ëœë¤)
                     a_Sp = (float)(0.3f * Characters.FireCool);
                     weapon.sp = a_Sp * (1f - val);
                     break;
 
-                case 6:                            //½¯µå
+                case 6:                            //ì‰´ë“œ
                     a_Sp = (float)(7f * Characters.FireCool);
                     weapon.sp = a_Sp * (1f - val);
                     break;
 
-                case 7:                            //¿ø°Å¸®(ÇÁ·ĞÆ®)
+                case 7:                            //ì›ê±°ë¦¬(í”„ë¡ íŠ¸)
                     a_Sp = (float)(2.5f * Characters.FireCool);
                     weapon.sp = a_Sp * (1f - val);
                     break;
 
-                case 8:                            //¿ø°Å¸®(Áö·Ú)
+                case 8:                            //ì›ê±°ë¦¬(ì§€ë¢°)
                     a_Sp = (float)(3.5f * Characters.FireCool);
                     weapon.sp = a_Sp * (1f - val);
                     break;
 
-                case 9:                            //¿ø°Å¸®?(Àü¸ê)
+                case 9:                            //ì›ê±°ë¦¬?(ì „ë©¸)
                     a_Sp = (float)(80f * Characters.FireCool);
                     weapon.sp = a_Sp * (1f - val);
                     break;
 
-                case 10:                           //¿ø°Å¸®(³«·Ú)
+                case 10:                           //ì›ê±°ë¦¬(ë‚™ë¢°)
                     a_Sp = (float)(7f * Characters.FireCool);
                     weapon.sp = a_Sp * (1f - val);
                     break;
@@ -92,7 +93,7 @@ public class Passive : MonoBehaviour
         }
     }
 
-    void SpeedUp()  //ÀÌ¼Ó
+    void SpeedUp()  //ì´ì†
     {
         float sp = 3 * Characters.MoveSp;
         Game_Mgr.Inst.player.sp = sp + sp * val;
