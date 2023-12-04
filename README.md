@@ -84,7 +84,6 @@ ArkSurvivor
     }
 }
 ```
-
 </details>
 
 ---
@@ -108,7 +107,6 @@ ArkSurvivor
         rigid.velocity = Vector2.zero;
     }
 ```
-
 </details>
 
 ---
@@ -140,31 +138,8 @@ void Update()
             waveTimer = 0;
         }
     }
-
- IEnumerator Wave()
-    {
-        spawnData[level].c_spawnTime = 0.03f;
-
-        yield return new WaitForSeconds(1);
-
-        if (spawnData[level].c_spriteType == 0)
-        {
-            spawnData[level].c_spawnTime = 0.7f;
-        }
-
-        if (spawnData[level].c_spriteType == 1)
-        {
-            spawnData[level].c_spawnTime = 0.5f;
-        }
-
-        if (spawnData[level].c_spriteType == 2)
-        {
-            spawnData[level].c_spawnTime = 0.3f;
-        }
-
-        yield break;
-    }
 ```
+</details>
 <!---
 Nocha13/Nocha13 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
