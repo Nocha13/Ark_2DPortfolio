@@ -108,6 +108,41 @@ ArkSurvivor
     }
 ```
 </details>
+
+---
+* #03)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/PoolMgr.cs)) [적 오브젝트 풀링 구현]
+
+---
+* #04)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/Spawn.cs#L29)) [시간에 따른 적 데이터]
+
+<details>
+<summary>예시 코드</summary>
+  
+```csharp
+ void Update()
+    {
+        if (!Game_Mgr.Inst.isLive)
+            return;
+
+        timer += Time.deltaTime;
+        waveTimer += Time.deltaTime;
+        level = Mathf.Min(Mathf.FloorToInt(Game_Mgr.Inst.gameTime / spawnTime), spawnData.Length - 1);  //인덱스 에러 고침
+
+        if (timer > spawnData[level].c_spawnTime)
+        {
+            timer = 0;
+            Spawns();
+        }
+
+        if (waveTimer > waveTime)
+        {
+            StartCoroutine(Wave());
+
+            waveTimer = 0;
+        }
+    }
+```
+</details>
 <!---
 Nocha13/Nocha13 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
