@@ -44,7 +44,7 @@ ArkSurvivor
 <summary>예시 코드</summary>
   
 ```csharp
-void OnTriggerExit2D(Collider2D coll)
+ void OnTriggerExit2D(Collider2D coll)
     {
         if (!coll.CompareTag("Area"))
             return;
@@ -71,17 +71,17 @@ void OnTriggerExit2D(Collider2D coll)
                     transform.Translate(Vector3.up * dirY * 60);
                 }
 
-                else if (diffX > diffY)
+                else if (diffX > diffY) //수평이동
                 {
                     transform.Translate(Vector3.right * dirX * 60);
                 }
-                else if (diffX < diffY)
+                else if (diffX < diffY) //수직이동
                 {
                     transform.Translate(Vector3.up * dirY * 60);
                 }
                 break;
-}
-}
+        }
+    }
 }
 ```
 
