@@ -26,6 +26,7 @@ public class Spawn : MonoBehaviour
         //웨이브 주기 = 최대 게임 시간 / 수
     }
 
+    // ORDER : 04#) 시간에 따른 적 데이터
     void Update()
     {
         if (!Game_Mgr.Inst.isLive)
