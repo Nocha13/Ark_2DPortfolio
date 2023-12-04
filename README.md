@@ -71,11 +71,11 @@ ArkSurvivor
                     transform.Translate(Vector3.up * dirY * 60);
                 }
 
-                else if (diffX > diffY)
+                else if (diffX > diffY) //수평 이동
                 {
                     transform.Translate(Vector3.right * dirX * 60);
                 }
-                else if (diffX < diffY)
+                else if (diffX < diffY) //수직 이동
                 {
                     transform.Translate(Vector3.up * dirY * 60);
                 }
