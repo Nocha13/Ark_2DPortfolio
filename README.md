@@ -96,17 +96,18 @@ ArkSurvivor
 ```csharp
     void FixedUpdate()
     {
-        if (!Game_Mgr.Inst.isLive)
+        if (!Game_Mgr.Inst.isLive)    
             return;
 
         if (!isLive || anim.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
             return;
 
-        Vector2 dirVec = target.position - rigid.position;
-        Vector2 nextVec = dirVec.normalized * sp * Time.fixedDeltaTime;
+        Vector2 dirVec = target.position - rigid.position;                //플레이어 위치 - 적(자신) 위치
+        Vector2 nextVec = dirVec.normalized * sp * Time.fixedDeltaTime;   //점점 가깝게(순간이동 방식 X)
         rigid.MovePosition(rigid.position + nextVec);
-        rigid.velocity = Vector2.zero;
+        rigid.velocity = Vector2.zero;                                    
     }
+
 ```
 </details>
 
