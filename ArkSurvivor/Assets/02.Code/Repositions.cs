@@ -11,7 +11,7 @@ public class Repositions : MonoBehaviour
         coll2D = GetComponent<Collider2D>();
     }
 
-    
+// ORDER : #1) 맵 재배치 로직 구현
     void OnTriggerExit2D(Collider2D coll)
     {
         if (!coll.CompareTag("Area"))
@@ -57,7 +57,6 @@ public class Repositions : MonoBehaviour
                     transform.Translate(ran + dist * 2);
                 }
                 break;
-                // ORDER : #1) 맵 재배치 로직 구현
         }
     }
 }
