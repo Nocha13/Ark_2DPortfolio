@@ -172,7 +172,7 @@ public class Active : MonoBehaviour
         player.BroadcastMessage("ApplyGear", SendMessageOptions.DontRequireReceiver);
     }
 
-    // ORDER : 05#) 스킬 능력 구현
+    // ORDER : #05) 스킬 능력 구현
     #region //메인 공격 
     void Place()//검
     {
