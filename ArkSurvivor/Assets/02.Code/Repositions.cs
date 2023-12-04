@@ -16,8 +16,8 @@ public class Repositions : MonoBehaviour
         if (!coll.CompareTag("Area"))
             return;
 
-        Vector3 playerPos = Game_Mgr.Inst.player.transform.position; //플레이어 위치
-        Vector3 tilePos = transform.position;                        //타일 위치      
+        Vector3 playerPos = Game_Mgr.Inst.player.transform.position;
+        Vector3 tilePos = transform.position;                           
 
         switch (transform.tag)
         {
