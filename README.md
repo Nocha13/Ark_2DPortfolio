@@ -169,7 +169,58 @@ void Update()
 </details>
 
 ---
-* #05)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/Items.cs)) [아이템 업그레이드 구현]=
+* #05)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/Items.cs)) [아이템 업그레이드 구현]
+
+---
+* #06)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/PoolMgr.cs)) [적 오브젝트 풀링 구]
+
+<details>
+<summary>예시 코드</summary>
+  
+```csharp
+ public class PoolMgr : MonoBehaviour
+{
+    //프리팹 보관 변수
+    public GameObject[] prefabs;
+
+    //풀 담당 리스트
+    List<GameObject>[] pools;
+    void Awake()
+    {
+        pools = new List<GameObject>[prefabs.Length];
+
+        for (int idx = 0; idx < pools.Length; idx++)
+        {   //풀 리스트 초기화
+            pools[idx] = new List<GameObject>();
+        }
+    }
+
+    public GameObject Get(int index)
+    {
+        GameObject sel = null;
+
+        //선택한 풀의 비활성화 오브젝트에 접근
+        foreach (GameObject item in pools[index])
+        {   //발견시 sel변수에 할당
+            if (!item.activeSelf)
+            {
+                sel = item;
+                sel.SetActive(true);
+                break;
+            }
+        }
+        //못 찾을시
+        if (!sel)
+        {   //새롭게 생성, sel변수에 할당
+            sel = Instantiate(prefabs[index], transform);
+            pools[index].Add(sel);
+        }
+
+        return sel;
+    }
+}
+```
+</details>
 <!---
 Nocha13/Nocha13 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
