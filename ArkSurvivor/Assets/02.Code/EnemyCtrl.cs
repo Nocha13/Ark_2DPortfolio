@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class EnemyCtrl : MonoBehaviour
 {
-    public float sp;            //¼Óµµ
-    public int damage;          //µ¥¹ÌÁö
-    public float hp;            //ÇöÀç Ã¼·Â
-    public float maxHp;         //ÃÖ´ë Ã¼·Â
+    public float sp;            //ì†ë„
+    public int damage;          //ë°ë¯¸ì§€
+    public float hp;            //í˜„ì¬ ì²´ë ¥
+    public float maxHp;         //ìµœëŒ€ ì²´ë ¥
     public RuntimeAnimatorController[] animCon;
-    public Rigidbody2D target;  //Å¸°Ù = ÇÃ·¹ÀÌ¾î
+    public Rigidbody2D target;  //íƒ€ê²Ÿ = í”Œë ˆì´ì–´
 
     public GameObject shadow;
 
-    bool isLive;         //»ı»ç¿©ºÎ
+    bool isLive;         //ìƒì‚¬ì—¬ë¶€
 
     public static EnemyCtrl Inst;
 
-    //ÄÄÆ÷³ÍÆ®
+    //ì»´í¬ë„ŒíŠ¸
     Rigidbody2D rigid;
-    Collider2D coll2D;    //Ç¥½Ã
+    Collider2D coll2D;    //í‘œì‹œ
     SpriteRenderer spriter;
     Animator anim;
     WaitForFixedUpdate wait;
@@ -34,7 +34,7 @@ public class EnemyCtrl : MonoBehaviour
         anim = GetComponent<Animator>();
         wait = new WaitForFixedUpdate();
     }
-
+    // ORDER : #ì  í”Œë ˆì´ì–´ ìë™ ì¶”ì )
     void FixedUpdate()
     {
         if (!Game_Mgr.Inst.isLive)
@@ -62,14 +62,14 @@ public class EnemyCtrl : MonoBehaviour
         target = Game_Mgr.Inst.player.GetComponent<Rigidbody2D>();
         shadow.gameObject.SetActive(true);
         isLive = true;
-        coll2D.enabled = true;      //ÄÄÆ÷³ÍÆ® ºñÈ°¼º
-        rigid.simulated = true;     //RigidBody ºñÈ°¼º
-        spriter.sortingOrder = 2;   //½ºÇÁ¶óÀÌÆ® Order in Layer
+        coll2D.enabled = true;      //ì»´í¬ë„ŒíŠ¸ ë¹„í™œì„±
+        rigid.simulated = true;     //RigidBody ë¹„í™œì„±
+        spriter.sortingOrder = 2;   //ìŠ¤í”„ë¼ì´íŠ¸ Order in Layer
         anim.SetBool("Dead", false); 
         hp = maxHp;
     }
 
-    public void Init(SpawnData data)//½ºÆù µ¥ÀÌÅÍ ¹Ş´Â ÇÔ¼ö
+    public void Init(SpawnData data)//ìŠ¤í° ë°ì´í„° ë°›ëŠ” í•¨ìˆ˜
     {
         anim.runtimeAnimatorController = animCon[data.c_spriteType];
         sp = data.c_sp;
@@ -80,43 +80,43 @@ public class EnemyCtrl : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if (!coll.CompareTag("Bullet") || !isLive) //ÅÂ±×°¡ Bullet ¾Æ´Ï¸é ¸®ÅÏ
+        if (!coll.CompareTag("Bullet") || !isLive) //íƒœê·¸ê°€ Bullet ì•„ë‹ˆë©´ ë¦¬í„´
             return;
 
-        hp -= coll.GetComponent<Bullets>().damage;  //Ã¼·Â = Ã¼·Â - µ¥¹ÌÁö
-        StartCoroutine(KnockBack());                //³Ë¹é ½ÇÇà
+        hp -= coll.GetComponent<Bullets>().damage;  //ì²´ë ¥ = ì²´ë ¥ - ë°ë¯¸ì§€
+        StartCoroutine(KnockBack());                //ë„‰ë°± ì‹¤í–‰
 
-        if (hp > 0) //»ıÁ¸ Áß
+        if (hp > 0) //ìƒì¡´ ì¤‘
         {
             anim.SetTrigger("Hit");
             AudioMgr.Inst.PlaySfx(AudioMgr.SFX.Hit);
         }
-        else        //Á×À½
+        else        //ì£½ìŒ
         {
             shadow.gameObject.SetActive(false);
             isLive = false;
-            coll2D.enabled = false;     //ÄÄÆ÷³ÍÆ® ºñÈ°¼º
-            rigid.simulated = false;    //RigidBody ºñÈ°¼º
-            spriter.sortingOrder = 1;   //½ºÇÁ¶óÀÌÆ® Order in Layer
+            coll2D.enabled = false;     //ì»´í¬ë„ŒíŠ¸ ë¹„í™œì„±
+            rigid.simulated = false;    //RigidBody ë¹„í™œì„±
+            spriter.sortingOrder = 1;   //ìŠ¤í”„ë¼ì´íŠ¸ Order in Layer
             anim.SetBool("Dead", true);
             Game_Mgr.Inst.kill++;
             Game_Mgr.Inst.GetExp();
 
-            if(Game_Mgr.Inst.isLive)    // °ÔÀÓ Á¾·á°¡ ¾Æ´Ò¶§¸¸ È¿°úÀ½ Àç»ı(Á¾·á½Ã ¸ğµç Àû Á×±â¶§¹®)
+            if(Game_Mgr.Inst.isLive)    // ê²Œì„ ì¢…ë£Œê°€ ì•„ë‹ë•Œë§Œ íš¨ê³¼ìŒ ì¬ìƒ(ì¢…ë£Œì‹œ ëª¨ë“  ì  ì£½ê¸°ë•Œë¬¸)
                 AudioMgr.Inst.PlaySfx(AudioMgr.SFX.Dead);
         }
     }
 
     IEnumerator KnockBack()
     {
-        yield return wait; // ´ÙÀ½ ÇÏ³ªÀÇ ¹°¸® ÇÁ·¹ÀÓ µô·¹ÀÌ
-        Vector3 playerPos = Game_Mgr.Inst.player.transform.position;//ÇÃ·¹ÀÌ¾î À§Ä¡
-        Vector3 dirVec = transform.position - playerPos;            //ÇöÀç À§Ä¡ - ÇÃ·¹ÀÌ¾î À§Ä¡
-        //Áï¹ßÀû Èû
+        yield return wait; // ë‹¤ìŒ í•˜ë‚˜ì˜ ë¬¼ë¦¬ í”„ë ˆì„ ë”œë ˆì´
+        Vector3 playerPos = Game_Mgr.Inst.player.transform.position;//í”Œë ˆì´ì–´ ìœ„ì¹˜
+        Vector3 dirVec = transform.position - playerPos;            //í˜„ì¬ ìœ„ì¹˜ - í”Œë ˆì´ì–´ ìœ„ì¹˜
+        //ì¦‰ë°œì  í˜
         rigid.AddForce(dirVec.normalized * 7, ForceMode2D.Impulse);
     }
 
-    void Dead()//Á×À½
+    void Dead()//ì£½ìŒ
     {
         gameObject.SetActive(false);
     }
