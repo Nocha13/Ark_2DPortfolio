@@ -121,7 +121,7 @@ public class Active : MonoBehaviour
         damage = data.baseDamage * Characters.Damage;
         count = data.baseCount + Characters.Count;
 
-        //스크립트 오브젝트 독립성(인댁스 아닌 프리펩으로 설정함)
+        //스크립트 오브젝트 독립성(인덱덱스 아닌 프리펩으로 설정함)
         for (int idx = 0; idx < Game_Mgr.Inst.pool.prefabs.Length; idx++)
         {
             if (data.projectile == Game_Mgr.Inst.pool.prefabs[idx])
