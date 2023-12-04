@@ -38,7 +38,7 @@ ArkSurvivor
 
 주요 활용 기술
 ---
-* #01)([스크립트](기재예정)) [맵 재배치 로직 구현]
+* #01)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/Repositions.cs)) [맵 재배치 로직 구현]
 <details>
 <summary>예시 코드</summary>
   
