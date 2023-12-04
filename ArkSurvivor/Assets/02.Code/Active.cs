@@ -267,7 +267,7 @@ public class Active : MonoBehaviour
     void Lightning()//벼락
     {
         Transform bullet = Game_Mgr.Inst.pool.Get(prefabId).transform;
-        bullet.position = player.transform.position + (Random.insideUnitSphere * 7f);
+        bullet.position = player.transform.position + (Random.insideUnitSphere * 7f); //플레이어 반지름 원 기준 7
         bullet.GetComponent<Bullets>().Init(damage, count);
 
         AudioMgr.Inst.PlaySfx(AudioMgr.SFX.Lightning);
@@ -276,7 +276,7 @@ public class Active : MonoBehaviour
     void Spike()//스파이크
     {
         Transform bullet = Game_Mgr.Inst.pool.Get(prefabId).transform;
-        bullet.position = player.transform.position + (Random.insideUnitSphere * 5f);
+        bullet.position = player.transform.position + (Random.insideUnitSphere * 5f);  //플레이어 반지름 원 기준 5
         bullet.GetComponent<Bullets>().Init(damage, count);
 
         AudioMgr.Inst.PlaySfx(AudioMgr.SFX.Spike);
@@ -308,10 +308,10 @@ public class Active : MonoBehaviour
     }
     #endregion
 
-    public void LevelUp(float a_damage, int a_count)
-    {
-        damage = a_damage * Characters.Damage;
-        count += a_count;
+    public void LevelUp(float a_damage, int a_count) //스킬 레벨 업
+    {    
+        damage = a_damage * Characters.Damage;    //데미지
+        count += a_count;                         //근거리 - 무기 숫자 증가, 원거리 - 관통 수 증가
 
         if (id == 0)
             Place();
