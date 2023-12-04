@@ -44,11 +44,7 @@ ArkSurvivor
 <summary>예시 코드</summary>
   
 ```csharp
-public override IEnumerable<BattleUnit> SetTarget(BattleUnit actionUnit, List<GridPosition> targetUnits)
-{
-    // 적군에서 가장 체력 낮은 적을 타겟으로 잡음
-    return targetUnits.GetEnemyTarget(actionUnit, this).OrderLowHealth().GetTargetNum(this).SelectBattleUnit();
-}
+
 ```
 
 </details>
