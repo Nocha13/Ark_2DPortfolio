@@ -5,14 +5,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerCtrl : MonoBehaviour
 {
-    public Vector2 inputVec;    //ÀÔ·Â
-    public float sp;            //¼Óµµ
+    public Vector2 inputVec;    //ì…ë ¥
+    public float sp;            //ì†ë„
 
     public Scan scanner;
     public GameObject shadow;
     public RuntimeAnimatorController[] animCtrl;
 
-    //ÄÄÆ÷³ÍÆ®
+    //ì»´í¬ë„ŒíŠ¸
     Rigidbody2D rigid;
     [HideInInspector] public SpriteRenderer spriter;
     Animator anim;
@@ -30,6 +30,7 @@ public class PlayerCtrl : MonoBehaviour
         player = GetComponent<Transform>();
     }
 
+    // ORDER : #09) í”Œë ˆì´ì–´ ìºë¦­í„° ì„ íƒ
     void OnEnable()
     {
         sp *= Characters.MoveSp;
@@ -86,7 +87,7 @@ public class PlayerCtrl : MonoBehaviour
             {
                 if (GameObject.Find("Active 6").transform.Find("Shield(Clone)").gameObject.activeSelf == true)
                 {
-                    Debug.Log("ÅÍÄ¡µÊ");
+                    Debug.Log("í„°ì¹˜ë¨");
                     return;
                 }
             }
