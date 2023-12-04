@@ -151,7 +151,7 @@ ArkSurvivor
 * #06)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/Passive.cs#L43)) [패시브 능력 구현]
 
 ---
-* #)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/ItemDatas.cs)) [아이템 데이터 구현]
+* #07)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/ItemDatas.cs)) [아이템 데이터 구현]
 
 <details>
 <summary>예시 코드</summary>
@@ -176,6 +176,10 @@ ArkSurvivor
     public GameObject projectile;   //투사체
 ```
 </details>
+
+---
+* #08)([스크립트](https://github.com/Nocha13/Ark_2DPortfolio/blob/main/ArkSurvivor/Assets/02.Code/Items.cs)) [능력 업그레이드]
+
 
 <!---
 Nocha13/Nocha13 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
