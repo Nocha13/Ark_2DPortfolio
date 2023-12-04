@@ -253,7 +253,7 @@ public class AudioMgr : MonoBehaviour
         }
     }
 
-    public void PlayBgm(bool isPlay)    //플레이이
+    public void PlayBgm(bool isPlay)    //플레이
     {
         if (isPlay)
         {
